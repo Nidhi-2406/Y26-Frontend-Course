@@ -1,0 +1,144 @@
+/* 1. Universal Selector (*) - Resets default spacing across all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Element Selector (tag) - Styles base HTML tags */
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #e287a3;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 3. ID Selector (#id) - Targets unique section IDs */
+#about {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #a51c30;
+}
+
+#courses {
+    padding: 20px;
+}
+
+/* 4. Class Selector (.class) - Add class="btn" to your Submit/Reset buttons in HTML */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 5. Grouping Selector (A, B, C) - Applies shared styles to multiple headings */
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* 6. Descendant Selector (A B) - Targets all <a> tags anywhere inside <nav> */
+nav {
+    background-color: #eba4ba;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* 7. Child Selector (A > B) - Targets direct <section> children inside <main> */
+main > section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+}
+
+/* 8. Adjacent Sibling Selector (A + B) - Styles the <p> immediately after <h2> in #about */
+#about h2 + p {
+    font-size: 1.1rem;
+    color: #444;
+    font-style: italic;
+}
+
+/* 9. General Sibling Selector (A ~ B) - Styles all <p> elements following <h2> in #campus-tour */
+#campus-tour h2 ~ p {
+    color: #a51c30;
+    font-weight: 600;
+}
+
+/* 10. Attribute Selector ([attr="val"]) - Targets specific input types in your form */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #a51c30;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 11. Pseudo-class Selector (:hover, :focus, :nth-child) - Interactive & structural states */
+nav a:hover {
+    text-decoration: underline;
+    color: #222;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #a51c30;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #e6c5e8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fce4c8;
+}
+
+
+#about p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #a51c30;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}

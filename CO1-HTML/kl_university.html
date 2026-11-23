@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KL University Vaddeswaram</title>
+    <link rel="stylesheet" href="kl_university.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>KL University Vaddeswaram</h1>
+        <img src="KL-University.jpg" alt="KL University Logo">
+        <p>Welcome to Our University</p>
+    </header>
+
+    <nav>
+        <a href="#about">Home</a> |
+        <a href="#about">About Us</a> |
+        <a href="#courses">Courses</a> |
+        <a href="#news">News</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Our College</h2>
+            <p>KL University provides quality technical education, fostering innovation, research, and holistic student development.</p>
+        </section>
+
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Course Name</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Computer Science Engineering</td>
+                        <td>CSE</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Electronics and Communication</td>
+                        <td>ECE</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Electrical Engineering</td>
+                        <td>EEE</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mechanical Engineering</td>
+                        <td>ME</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="news">
+            <h2>Latest News & Campus Highlights</h2>
+            <h3>Key Announcements (Unordered List)</h3>
+            <ul>
+                <li><strong>Admissions Open:</strong> Admissions are open for the academic year 2026.</li>
+                <li><strong>Annual Sports Meet:</strong> Our college is organizing an annual sports meet next month.</li>
+            </ul>
+
+            <h3>Admission Process (Ordered List)</h3>
+            <ol>
+                <li>Fill out the online application form.</li>
+                <li>Appear for the KLEEE entrance examination.</li>
+                <li>Attend counseling and document verification.</li>
+            </ol>
+        </section>
+
+
+        <section id="campus-tour">
+            <h2>Campus Virtual Tour</h2>
+            <p>Watch a glimpse of life at KL University:</p>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="KL University Campus Tour" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="contact">
+            <h2>Student Admission Inquiry Form</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="dept">Select Department:</label><br>
+                <select id="dept" name="dept">
+                    <option value="cse">Computer Science Engineering (CSE)</option>
+                    <option value="ece">Electronics and Communication (ECE)</option>
+                    <option value="eee">Electrical Engineering (EEE)</option>
+                    <option value="me">Mechanical Engineering (ME)</option>
+                </select><br><br>
+
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <input type="submit" class="btn" value="Submit Inquiry">
+                <input type="reset" class="btn" value="Clear">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="https://www.kluniversity.in" target="_blank" style="color: white;">OFFICIAL WEBSITE</a></p>
+        <p>Contact: info@kluniversity.in</p>
+        <p>&copy; 2026 KL University. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

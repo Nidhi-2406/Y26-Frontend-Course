@@ -1,0 +1,21 @@
+body{
+    background-color: pink;
+ }
+table{
+    width: 30%;
+    border-collapse: collapse;
+ }
+th,td{
+    border-color: 1px solid black;
+    padding: 10px;
+    text-align: center;
+ }
+th{
+    background-color: aquamarine;
+ }
+caption{
+    color: brown;
+ }
+tr{
+    background-color: bisque;
+ }
