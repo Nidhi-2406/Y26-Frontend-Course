@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="University Student Activity Management Portal — browse upcoming campus events, explore clubs and activities, and register online." />
+  <meta name="theme-color" content="#1f3a5f" />
+  <title>Student Activity Management Portal | University Events</title>
+</head>
+<body>
+  <!-- Skip link for keyboard and screen-reader users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="brand">
+      <p class="site-title">CampusPulse</p>
+      <p class="site-tagline">University Student Activity Management Portal</p>
+    </div>
+
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="#upcoming-events">Upcoming Events</a></li>
+        <li><a href="#activity-categories">Activities</a></li>
+        <li><a href="#registration-section">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <h1>University Student Activity Management Portal</h1>
+    <p>Discover campus events, join student organizations, and register for upcoming activities.</p>
+
+    <section id="upcoming-events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+
+      <article>
+        <h3>Annual Tech &amp; Innovation Hackfest</h3>
+        <p><strong>Date:</strong> <time datetime="2026-12-05">December 5, 2026</time> | <strong>Venue:</strong> Central Auditorium</p>
+        <p>Collaborate with peers on hardware, web, and AI prototypes during a 24-hour campus sprint.</p>
+      </article>
+
+      <article>
+        <h3>Inter-Departmental Cultural &amp; Music Night</h3>
+        <p><strong>Date:</strong> <time datetime="2026-12-12">December 12, 2026</time> | <strong>Venue:</strong> Open Air Amphitheatre</p>
+        <p>Showcase live music, dance, drama, and spoken word performances from student clubs.</p>
+      </article>
+    </section>
+
+    <section id="activity-categories" aria-labelledby="activities-heading">
+      <h2 id="activities-heading">Explore University Activities</h2>
+      <ul>
+        <li>Technical &amp; Coding Societies</li>
+        <li>Cultural, Arts &amp; Performing Clubs</li>
+        <li>Sports, Fitness &amp; Outdoor Recreation</li>
+        <li>Volunteering &amp; Community Outreach</li>
+      </ul>
+    </section>
+
+    <section id="registration-section" aria-labelledby="registration-heading">
+      <h2 id="registration-heading">Event Registration Form</h2>
+      <p id="form-instructions">Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.</p>
+
+      <form action="/submit-registration" method="post" aria-describedby="form-instructions">
+        <fieldset>
+          <legend>Student Details</legend>
+
+          <div class="form-group">
+            <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="student-id">University Registration / Roll Number <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="student-id"
+              name="studentId"
+              pattern="[A-Za-z0-9-]{5,20}"
+              aria-describedby="student-id-hint"
+              required
+            />
+            <small id="student-id-hint">Enter 5–20 letters or numbers (for example, 2600030715).</small>
+          </div>
+
+          <div class="form-group">
+            <label for="university-email">University Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="university-email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="event-select">Select Event or Activity <span aria-hidden="true">*</span></label>
+            <select id="event-select" name="event" required>
+              <option value="">-- Choose an event --</option>
+              <option value="hackfest-2026">Annual Tech &amp; Innovation Hackfest (Dec 5)</option>
+              <option value="cultural-night-2026">Inter-Departmental Cultural &amp; Music Night (Dec 12)</option>
+              <option value="community-drive">Campus Sustainability &amp; Outreach Drive</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Participation Mode</legend>
+
+          <div class="radio-option">
+            <input type="radio" id="mode-solo" name="participationMode" value="solo" checked />
+            <label for="mode-solo">Individual / Solo Participant</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" id="mode-team" name="participationMode" value="team" />
+            <label for="mode-team">Team Member</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" id="mode-volunteer" name="participationMode" value="volunteer" />
+            <label for="mode-volunteer">Event Volunteer</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences &amp; Confirmations</legend>
+
+          <div class="checkbox-option">
+            <input type="checkbox" id="need-accessibility" name="preferences" value="accessibility-support" />
+            <label for="need-accessibility">Request seating or accessibility accommodations</label>
+          </div>
+
+          <div class="checkbox-option">
+            <input type="checkbox" id="email-updates" name="preferences" value="email-reminders" checked />
+            <label for="email-updates">Send schedule reminders via email</label>
+          </div>
+
+          <div class="checkbox-option">
+            <input type="checkbox" id="code-of-conduct" name="codeOfConduct" value="agreed" required />
+            <label for="code-of-conduct">I agree to follow university event guidelines and code of conduct <span aria-hidden="true">*</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="notes-textarea">Additional Notes or Dietary / Access Requirements</label>
+          <textarea
+            id="notes-textarea"
+            name="notes"
+            rows="4"
+            cols="40"
+            aria-describedby="notes-hint"
+          ></textarea>
+          <small id="notes-hint">Optional: share team preferences, accessibility needs, or questions for organizers.</small>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Clear Form</button>
+      </form>
+    </section>
+  </main>
+
+  <aside aria-label="Campus Helpdesk and Deadlines">
+    <h2>Quick Info &amp; Support</h2>
+    <p><strong>Registration Deadline:</strong> <time datetime="2026-12-01">December 1, 2026</time>, 5:00 PM</p>
+    <p><strong>Student Activities Desk:</strong> Student Center, Room 104</p>
+    <p><strong>Contact:</strong> <a href="mailto:activities@university.edu">activities@university.edu</a></p>
+  </aside>
+
+  <footer>
+    <p>&copy; <time datetime="2026">2026</time> University Student Affairs Office. All rights reserved.</p>
+  </footer>
+</body>
+</html>
