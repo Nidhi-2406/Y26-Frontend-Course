@@ -1,0 +1,19 @@
+HTML:
+---------------
+Hypertext markup language(markup oriented language)
+Markup--tag or element
+Main purpose is to design the structure and content of the webpage.
+Not a programming language.
+
+STRUCTURE OF HTML PAGE:
+
+<Document type>
+<html lang=1..>
+<html> ----start tag
+   <head>
+        <title></title> or <script></script> or <meta>
+   </head>
+   <body bgcolor="red"> content of the webpage</body>--Element
+</html> ---end tag
+
+It's not compulsory to have ending tag for each tag. for ex: <or><img><hr>
